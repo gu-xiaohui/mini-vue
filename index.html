@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟Vue</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+        <h1>{{name}}</h1>
+        <div>
+            <p>
+                <span>{{name}}</span>
+            </p>
+        </div>
+        <div v-text="msg"></div>
+        <div v-text="name"></div>
+        <input type="text" v-model="name">
+        <input type="text" v-model="msg">
+    </div>
+    <script type="module">
+        import Vue from './js/vue.js'
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'Msg',
+                name: 'Name'
+            }
+        });
+    </script>
+</body>
+
+</html>
